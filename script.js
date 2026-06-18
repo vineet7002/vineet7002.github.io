@@ -26,76 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Resume Tab Switching
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabPanes = document.querySelectorAll('.tab-pane');
 
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Remove active class from all buttons and panes
-            tabBtns.forEach(b => b.classList.remove('active'));
-            tabPanes.forEach(p => p.classList.remove('active'));
-
-            // Add active class to clicked button
-            btn.classList.add('active');
-
-            // Show corresponding pane
-            const targetId = btn.getAttribute('data-target');
-            const targetPane = document.getElementById(targetId);
-            if (targetPane) {
-                targetPane.classList.add('active');
-            }
-        });
-    });
-
-    // Drag and Drop Upload UI Mockup
-    const dropZone = document.getElementById('drop-zone');
-    const fileUpload = document.getElementById('file-upload');
-    const fileInfo = document.getElementById('file-info');
-
-    if (dropZone && fileUpload && fileInfo) {
-        // Highlight drop zone on drag
-        ['dragenter', 'dragover'].forEach(eventName => {
-            dropZone.addEventListener(eventName, (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                dropZone.classList.add('dragover');
-            });
-        });
-
-        // Unhighlight drop zone
-        ['dragleave', 'drop'].forEach(eventName => {
-            dropZone.addEventListener(eventName, (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                dropZone.classList.remove('dragover');
-            });
-        });
-
-        // Handle drop
-        dropZone.addEventListener('drop', (e) => {
-            const files = e.dataTransfer.files;
-            handleFiles(files);
-        });
-
-        // Handle file selection via input
-        fileUpload.addEventListener('change', function() {
-            handleFiles(this.files);
-        });
-
-        function handleFiles(files) {
-            if (files.length > 0) {
-                const file = files[0];
-                fileInfo.innerHTML = `<strong>Selected File:</strong> ${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
-                fileInfo.style.color = '#10b981'; // Green color for success
-                
-                // Mock upload process
-                setTimeout(() => {
-                    fileInfo.innerHTML += '<br><em>Simulating upload... Done! (This is a visual demo)</em>';
-                }, 1000);
-            }
-        }
-    }
 
     // Add scroll animation observer for sections
     const observerOptions = {
