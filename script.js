@@ -53,40 +53,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Custom Cursor Follower Logic
-    const cursorFollower = document.createElement('div');
-    cursorFollower.classList.add('cursor-follower');
-    document.body.appendChild(cursorFollower);
-
-    let mouseX = window.innerWidth / 2;
-    let mouseY = window.innerHeight / 2;
-    let cursorX = mouseX;
-    let cursorY = mouseY;
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-
-    // Animate cursor for smooth trailing
-    function animateCursor() {
-        // Linear interpolation for smooth tracking
-        cursorX += (mouseX - cursorX) * 0.2;
-        cursorY += (mouseY - cursorY) * 0.2;
-        cursorFollower.style.left = cursorX + 'px';
-        cursorFollower.style.top = cursorY + 'px';
-        requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-
-    // Add hover effects for interactive elements
-    const interactives = document.querySelectorAll('a, button, .btn');
-    interactives.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursorFollower.classList.add('hovering');
-        });
-        el.addEventListener('mouseleave', () => {
-            cursorFollower.classList.remove('hovering');
-        });
-    });
 });
