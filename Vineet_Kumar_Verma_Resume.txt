@@ -1,0 +1,24 @@
+Vineet Kumar Verma
+B.Tech (CSE-AI&ML) | Artificial Intelligence & Machine Learning Enthusiast
+
+Contact:
+Email: vineet7002ppt@gmail.com
+Phone: 9695887002
+LinkedIn: linkedin.com/in/vineet-kumar-0526132b4
+
+About:
+Motivated and disciplined B.Tech (CSE-AI&ML) student with strong interest in Artificial Intelligence, Machine Learning, and software development. Seeking opportunities to apply technical skills, grow professionally, and contribute to real-world projects.
+
+Education:
+- B.Tech in Computer Science & Engineering (AI & ML), Goel Institute of Technology & Management, Lucknow | 6th Semester (Pursuing)
+- Class 12, Sri Sai Inter College, Barabanki (2023) | Percentage: 68%
+- Class 10, Pioneer Montessori Inter College, Barabanki (2021) | Percentage: 71%
+
+Skills:
+- Domains: Artificial Intelligence, Machine Learning, Data Preprocessing
+- Programming: Python, C, HTML (Basic)
+- Tools: Pandas, NumPy, Matplotlib, OpenCV, MS Excel
+- Soft Skills: Communication, Leadership
+
+Projects:
+- Real-Time Face Recognition System (Python, OpenCV)
